@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualité des tronçons de l'EMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.5/ol.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.6.5/ol.js"></script>
+    <link rel="stylesheet" href="css_troncons.css">
+</head>
+<body>
+    <header>
+        <h1 class="title-head">Évaluation de la qualité des tronçons de l'EMS</h1>
+        <button class="setting-button" id="settingsButton">Information</button>
+        <!-- Bulle d'information cachée par défaut -->
+        <div id="infoBubble" class="info-bubble" style="display: none;">
+            Ce site a été réalisé dans le cadre de l'atelier Géo-Lab par Antonin Orny, Chloé Stephenson, Gaël Rambatomanga et Baptiste Clémence.
+        </div>
+    </header>
+
+     <div class="container">
+        <!-- Sidebar avec les boutons et le texte explicatif -->
+        <div class="sidebar">
+            <button class="temp-button" id="tempButton">Régulation de la température</button>
+            <button class="allerg-button" id="allergButton">Indice allergénique</button>
+            
+            <!-- Texte explicatif qui change selon le bouton cliqué -->
+            <div id="explanatoryText" class="explanatory-text">
+                <h3>Régulation de la température</h3>
+                <p>
+                Cet indicateur estime la capacité des tronçons à modérer les températures locales. 
+                Les valeurs plus élevées indiquent une meilleure régulation thermique, ce qui contribue 
+                à un microclimat plus agréable en réduisant les effets d'îlots de chaleur.
+                <br><br>
+                L'indice de régulation de la température a été calculé à partir de données relatives aux caractéristiques de la végétation et la structure urbaine de chaque tronçon de rue. Les valeurs relatives à la végétation concernent l'ombre portée d'un arbre, le nombre d'arbres, le SIOM (Short Integral of Maturity), la végétation basse. Le contexte urbain est caractérisé par la hauteur des bâtiments, la surface imperméable, la surface hydrographique et le Sky View Factor.    
+                </p>
+            </div>
+        </div> 
+    <div id="map" class="map"></div>
+    <div id="legend" class="legend"></div>
+    <div class="info" id="info">Survolez une rue pour voir l'indicateur.</div>
+    </div>  
+    <script src="js_troncons.js"></script>
+</body>
+</html>
